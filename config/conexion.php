@@ -4,15 +4,17 @@
     class Conectar{
         protected $dbh;
 
-        protected function Conexion(){
+        function Conexion(){
             try{
-                $conectar = $this->dbh = new PDO("mysql:localhost:3307;dbname=helpdesk", "root", "");
+                $conectar = new PDO("mysql:host=localhost;port=3307;dbname=helpdesk", "root", "");
+                //mysqli_select_db($conectar, "helpdesk");s
                 return $conectar;
             }   catch (Exception $e) {
                 print "Error BD! " . $e->getMessage()."<br/>";
                 die();
             }
         }
+
 
         public function set_names(){
             return $this->dbh->query("SET NAMES 'utf8'");
@@ -24,3 +26,5 @@
     }
 
 ?>
+
+
