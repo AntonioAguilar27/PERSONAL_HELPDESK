@@ -4,10 +4,9 @@
     class Conectar{
         protected $dbh;
 
-        function Conexion(){
+        protected function Conexion(){
             try{
-                $conectar = new PDO("mysql:host=localhost;port=3307;dbname=helpdesk", "root", "");
-                //mysqli_select_db($conectar, "helpdesk");s
+                $conectar = $this->dbh = new PDO("mysql:host=localhost;dbname=helpdesk","root","");
                 return $conectar;
             }   catch (Exception $e) {
                 print "Error BD! " . $e->getMessage()."<br/>";
@@ -26,5 +25,6 @@
     }
 
 ?>
+
 
 
