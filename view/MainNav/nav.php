@@ -7,13 +7,13 @@
             </a>
         </li>
         <li class="blue-dirty">
-            <a href="..\Home\">
+            <a href="..\NuevoTicket\">
             <span class="glyphicon glyphicon-th"></span>
             <span class="lbl">Nuevo ticket</span>
             </a>
         </li>
         <li class="blue-dirty">
-            <a href="..\Home\">
+            <a href="..\ConsultarTicket\">
             <span class="glyphicon glyphicon-th"></span>
             <span class="lbl">Consultar ticket</span>
             </a>
