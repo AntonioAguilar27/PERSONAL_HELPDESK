@@ -12,87 +12,56 @@
 	<div class="mobile-menu-left-overlay"></div>
 
 	<?php require_once("../MainNav/nav.php");?>
-
+ 
 		<!--Contenido-->
 
-	<div class="page-content">
-		<div class="container-fluid">
-            <header class="section-header">
-				    <div class="tbl">
-				    	<div class="tbl-row">
-						    <div class="tbl-cell">
-							    <h3>Nuevo ticket</h3>
-							    <ol class="breadcrumb breadcrumb-simple">
-								<li><a href="#">Home</a></li>
-								<li class="active">Nuevo ticket</li>
-							    </ol>
-					    	</div>
-					    </div>
-                    </div>
-            </header>
-
-            <div class="box-typical box-typical-padding">
-				<p>
-					Desde esta ventana podras generar tickets
-				</p>
-                <form>
-					<div class="form-group row">
-						<label class="col-sm-2 form-control-label">Text</label>
-						<div class="col-sm-10">
-							<p class="form-control-static"><input type="text" class="form-control" id="inputPassword" placeholder="Text"></p>
+		<div class="page-content">
+			<div class="container-fluid">
+				<header class="section-header">
+						<div class="tbl">
+							<div class="tbl-row">
+								<div class="tbl-cell">
+									<h3>Nuevo ticket</h3>
+									<ol class="breadcrumb breadcrumb-simple">
+									<li><a href="#">Home</a></li>
+									<li class="active">Nuevo ticket</li>
+									</ol>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-2 form-control-label">Text Disabled</label>
-						<div class="col-sm-10">
-							<p class="form-control-static"><input type="text" disabled class="form-control" id="inputPassword" placeholder="Text Disabled"></p>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-2 form-control-label">Text Readonly</label>
-						<div class="col-sm-10">
-							<p class="form-control-static"><input type="text" readonly class="form-control" id="inputPassword" placeholder="Text Readonly"></p>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="inputPassword" class="col-sm-2 form-control-label">Password</label>
-						<div class="col-sm-10">
-							<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="exampleSelect" class="col-sm-2 form-control-label">Select</label>
-						<div class="col-sm-10">
-							<select id="exampleSelect" class="form-control">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="exampleSelect2" class="col-sm-2 form-control-label">Multiple select</label>
-						<div class="col-sm-10">
-							<select multiple class="form-control" id="exampleSelect2">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="exampleSelect" class="col-sm-2 form-control-label">Textarea</label>
-						<div class="col-sm-10">
-							<textarea rows="4" class="form-control" placeholder="Textarea"></textarea>
-						</div>
-					</div>
-				</form>
-            </div>
-		</div><!--.container-fluid-->
-	</div><!--.page-content-->
+				</header>
+				<h5 class="m-t-lg with-border">Ingresar información</h5>
+					<div class="row">
+							<form method="post" id="ticket_form">
+								<input type="hidden" id="usu_id" name="usu_id" value="<?php echo $_SESSION["usu_id"]?>">
+								<div class="col-lg-6">
+									<fieldset class="form-group">
+										<label class="form-label semibold" for="exampleInput">Categoria</label>
+										<select class="form-control" id="cat_id" aria-placeholder="seleccione una categoria">
+										</select>
+									</fieldset>
+								</div>
+								<div class="col-lg-6">
+									<fieldset class="form-group">
+										<label class="form-label semibold" for="tick_titulo">Titulo</label>
+										<input type="text" class="form-control" id="tick_titulo" placeholder="Ingrese titulo">
+									</fieldset>
+								</div>
+								<div class="col-lg-12">
+									<fieldset class="form-group">
+										<label class="form-label semibold" for="tick_descrip">Descripción</label>
+										<div class="summernote-theme-1">
+											<textarea class="summernote" name="name" id="tick_descrip" name="tick_descrip">describe el problema</textarea>
+										</div>
+									</fieldset>
+								</div>
+								<div class="col-lg-12">
+									<button type="button" class="btn btn-inline btn-primary" value="add" name="action">Guardar</button>
+								</div>
+							</form>
+					</div><!--.row-->
+			</div><!--.container-fluid-->
+		</div><!--.page-content-->
 
 	    <!--Contenido-->
 
